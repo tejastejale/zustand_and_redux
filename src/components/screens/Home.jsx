@@ -1,6 +1,7 @@
 import React from "react";
 import store from "../store/store";
 import { useDispatch, useSelector } from "react-redux";
+import FileUpload from "../utils/FileUpload";
 
 function Home() {
   // Zustand store
@@ -17,8 +18,8 @@ function Home() {
   };
 
   return (
-    <div className="flex">
-      <div className="m-auto flex-col">
+    <div className="flex justify-evenly">
+      <div className="flex-col">
         <p>Zustand data: {data}</p>
         <button
           className="p-1 px-2 w-full cursor-pointer rounded bg-gray-700"
@@ -27,7 +28,8 @@ function Home() {
           Increment
         </button>
       </div>
-      <div className="m-auto flex-col ">
+      <FileUpload />
+      <div className="flex-col ">
         <p>Redux data: {reduxData}</p>
         <button
           className="p-1 px-2 w-full cursor-pointer rounded bg-gray-700"
